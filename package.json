@@ -2,11 +2,9 @@
   "name": "backend",
   "version": "1.0.0",
   "description": "",
-  "type": "module",
   "main": "app.js",
   "scripts": {
-    "start": "NODE_OPTIONS='--experimental-specifier-resolution=node' node src/app.js",
-    "vercel-build": "echo hello",
+    "start": " node src/app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",

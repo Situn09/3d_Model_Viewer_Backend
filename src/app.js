@@ -1,9 +1,9 @@
-import express from "express";
-import mongoose from "mongoose";
-import dotenv from "dotenv";
-import cors from "cors";
-import model from "./routes/model.js";
-import connectDB from "./db/index.js";
+const express = require("express");
+const mongoose = require("mongoose");
+const dotenv = require("dotenv");
+const cors = require("cors");
+const model = require("./routes/model.js");
+const connectDB = require("./db/index.js");
 
 dotenv.config({ path: "./.env" });
 
@@ -25,12 +25,15 @@ app.use("/uploads", express.static("uploads"));
 
 // Routes
 app.use("/api/models", model);
-app.get("/hello", (req, res) => {
+app.get("/", (req, res) => {
   res.send("hello world");
+});
+app.get("/favicon.ico", (req, res) => {
+  res.send("bye world");
 });
 
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
 });
 
-export default app;
+module.exports = app;

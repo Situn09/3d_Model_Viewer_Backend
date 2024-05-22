@@ -1,7 +1,7 @@
-import express from "express";
-import multer from "multer";
-import { Model } from "../models/Model.js";
-import { uploadOnCloudinary } from "../utils/cloundinary.js";
+const express = require("express");
+const multer = require("multer");
+const { Model } = require("../models/Model.js");
+const { uploadOnCloudinary } = require("../utils/cloundinary.js");
 
 const router = express.Router();
 
@@ -32,4 +32,4 @@ router.get("/", async (req, res) => {
   res.send(models);
 });
 
-export default router;
+module.exports = router;
