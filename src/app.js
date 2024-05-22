@@ -25,7 +25,7 @@ app.use("/uploads", express.static("uploads"));
 
 // Routes
 app.use("/api/models", model);
-app.get("/", (req, res) => {
+app.get("/hello", (req, res) => {
   res.send("hello world");
 });
 
