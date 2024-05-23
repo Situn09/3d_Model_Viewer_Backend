@@ -28,9 +28,6 @@ app.use("/api/models", model);
 app.get("/", (req, res) => {
   res.send("hello world");
 });
-app.get("/favicon.ico", (req, res) => {
-  res.send("bye world");
-});
 
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
