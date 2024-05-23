@@ -1,6 +1,6 @@
 const express = require("express");
 const multer = require("multer");
-const Model = require("../models/Model.js");
+const Model = require("../models/model.js");
 const uploadOnCloudinary = require("../utils/cloundinary.js");
 const { ApiError } = require("../utils/ApiError.js");
 
