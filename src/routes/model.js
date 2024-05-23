@@ -25,7 +25,7 @@ router.post("/", upload.single("file"), async (req, res) => {
   if (!modleFile) throw new ApiError(400, "3d model modleFile is required");
   const model = new Model({
     name: req.body.name,
-    url: `http://localhost:5000/uploads/${req.file.filename}`,
+    url: `https://threed-model-viewer-backend.onrender.com/uploads/${req.file.filename}`,
   });
 
   await model.save();
